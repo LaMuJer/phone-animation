@@ -56,7 +56,7 @@ const App = () => {
               </div>
               <div className="row-span-1 flex items-center">
                 <div className="flex justify-between items-center w-full">
-                  <div className="flex items-center gap-3 text-neutral-300 font-light">
+                  <div className="flex items-center gap-3 text-neutral-500 font-light">
                     <a className="underline" href="">
                       github
                     </a>
