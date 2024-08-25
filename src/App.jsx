@@ -2,21 +2,81 @@ import React from "react";
 
 const App = () => {
   return (
-    <div className="container mx-auto">
-      <div className="flex flex-col justify-center items-center w-full h-screen gap-5">
-        <div className="flex items-center gap-3 bg-green-100 text-green-500 px-3 py-1 rounded-md">
-          <span class="relative flex h-3 w-3">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-          </span>
-          <p>Hello</p>
+    <div className="w-screen h-screen">
+      <div className="grid xl:grid-cols-3 md:grid-cols-4 w-full h-full">
+        {/* left side - multiple phones animation */}
+        <div className="col-span-2">
+          <div className="w-full h-full overflow-hidden relative">
+            <div className="grid grid-cols-5 gap-5 w-[100vw] h-full tile-box">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <div key={index} className="col-span-1 tiles">
+                  <div className="w-full h-full flex flex-col gap-5">
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <img
+                        key={index}
+                        src={`${Math.ceil(Math.random() * 5)}.png`}
+                        alt="home"
+                        className="md:rounded-3xl rounded-sm border shadow-sm"
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        <p className="font-bold text-5xl">I am Hsu Win Lat</p>
-        <p className="text-center">
-          <span className="font-light">This starter includes </span>
-          <br />
-          <span className="font-semibold"> ReactJS, TailwindCSS, GSAP</span>
-        </p>
+        {/* right side - forms */}
+        <div className="xl:col-span-1 md:col-span-2">
+          <div className="w-full h-full bg-[#000000] text-white px-10 font-sora">
+            <div className="grid grid-rows-9 h-full">
+              <div className="row-span-1">
+                <div className="flex flex-col justify-center h-full">
+                  <div className="flex justify-between items-center">
+                    <a href="mailto:hsuwinlat2910@gmail.com">
+                      hsuwinlat2910@gmail.com
+                    </a>
+                    <p className="text-end text-neutral-600 text-xs">
+                      Hsu Win Lat
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="row-span-7">
+                <div className="h-full flex flex-col justify-center">
+                  <h1 className="text-5xl font-bold">
+                    Welcome to Weekly Issue Number 3
+                  </h1>
+                  <p className="text-neutral-500 font-light mt-5">
+                    Multiple Phones Animation
+                  </p>
+                  <button className="w-full h-10 bg-[#8E6CEF] text-white rounded-md mt-20">
+                    Follow
+                  </button>
+                </div>
+              </div>
+              <div className="row-span-1 flex items-center">
+                <div className="flex justify-between items-center w-full">
+                  <div className="flex items-center gap-3 text-neutral-300 font-light">
+                    <a className="underline" href="">
+                      github
+                    </a>
+                    <a className="underline" href="">
+                      facebook
+                    </a>
+                  </div>
+                  <div className="">
+                    <a
+                      href=""
+                      className="bg-[#8E6CEF] rounded-md p-2 hover:bg-white hover:text-black active:scale-95 transition-all"
+                    >
+                      Previous Issue
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

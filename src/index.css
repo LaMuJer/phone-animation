@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,4 +8,39 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.tile-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+}
+
+.tiles {
+  transform: translateY(-55%);
+  animation: runner 50s linear infinite;
+}
+
+@keyframes runner {
+  100% {
+    transform: translateY(-5%);
+  }
+}
+
+/* change animation direct here */
+.tiles:nth-child(2) {
+  animation-duration: 120s;
+  animation-direction: reverse;
+}
+.tiles:nth-child(4) {
+  animation-duration: 120s;
+  animation-direction: reverse;
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+  .tiles {
+    transform: translateY(-35%);
+  }
 }
