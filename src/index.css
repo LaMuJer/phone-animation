@@ -44,3 +44,10 @@
     transform: translateY(-35%);
   }
 }
+
+/* phone */
+@media (max-width: 768px) {
+  .tiles {
+    transform: translateY(-70%);
+  }
+}
