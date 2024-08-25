@@ -7,16 +7,16 @@ const App = () => {
         {/* left side - multiple phones animation */}
         <div className="col-span-2">
           <div className="w-full h-full overflow-hidden relative">
-            <div className="grid grid-cols-5 gap-5 w-[100vw] h-full tile-box">
+            <div className="grid grid-cols-5 md:gap-5 gap-2 md:w-[100vw] w-[150vw] h-full tile-box">
               {Array.from({ length: 5 }).map((_, index) => (
                 <div key={index} className="col-span-1 tiles">
-                  <div className="w-full h-full flex flex-col gap-5">
+                  <div className="w-full h-full flex flex-col md:gap-5 gap-2">
                     {Array.from({ length: 5 }).map((_, index) => (
                       <img
                         key={index}
                         src={`${Math.ceil(Math.random() * 5)}.png`}
                         alt="home"
-                        className="md:rounded-3xl rounded-sm border shadow-sm"
+                        className="md:rounded-3xl rounded-lg border shadow-sm"
                       />
                     ))}
                   </div>
