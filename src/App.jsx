@@ -50,23 +50,34 @@ const App = () => {
                     Multiple Phones Animation
                   </p>
                   <button className="w-full h-10 bg-[#8E6CEF] text-white rounded-md mt-20">
-                    Follow
+                    <a target="_blank" href="https://github.com/LaMuJer">
+                      Follow
+                    </a>
                   </button>
                 </div>
               </div>
               <div className="row-span-1 flex items-center">
                 <div className="flex justify-between items-center w-full">
                   <div className="flex items-center gap-3 text-neutral-500 font-light">
-                    <a className="underline" href="">
+                    <a
+                      target="_blank"
+                      className="underline"
+                      href="https://github.com/LaMuJer"
+                    >
                       github
                     </a>
-                    <a className="underline" href="">
+                    <a
+                      target="_blank"
+                      className="underline"
+                      href="https://www.facebook.com/staphy.staphy.9/"
+                    >
                       facebook
                     </a>
                   </div>
                   <div className="">
                     <a
-                      href=""
+                      target="_blank"
+                      href="https://marquee-zeta.vercel.app/"
                       className="bg-[#8E6CEF] rounded-md p-2 hover:bg-white hover:text-black active:scale-95 transition-all"
                     >
                       Previous Issue
